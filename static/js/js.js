@@ -4,6 +4,11 @@
 	});
 };
 $(document).ready( function(){
+    var $form = $( "form#contact_us_block" );
+    $form.on( "submit", function( event ) {
+      event.preventDefault();
+      $.post('/submit', $form.serialize());
+    });
 
 	// $('.table tr th').hover(function(){
 	// 	var i = $(this).index() + 1;
