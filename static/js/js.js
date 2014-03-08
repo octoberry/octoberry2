@@ -7,7 +7,11 @@ $(document).ready( function(){
     var $form = $( "form#contact_us_block" );
     $form.on( "submit", function( event ) {
       event.preventDefault();
-      $.post('/submit', $form.serialize());
+      $.post('/submit', $form.serialize())
+          .done(function() { $('.contact_form.success').show(); })
+          .fail(function() { $('.contact_form.error').show(); })
+          .always(function() {$form.hide()})
+      ;
     });
 
 	// $('.table tr th').hover(function(){

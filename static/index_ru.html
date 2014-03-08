@@ -189,23 +189,29 @@
 		<div class="wrap">
 			<div class="container">
 				<div class="contact_form" id="contact_us_block">
-					<h2 class="title">Расскажите о своем продукте: <a href="mailto:team@octoberry.ru">team@octoberry.ru</a></h2>
+					<h2 class="title"></h2>
 				</div>
-				<!--<form action="#" method="GET" class="contact_form clearfix" id="contact_us_block">-->
-					<!--<h2 class="title">Контакты</h2>-->
-					<!--<fieldset>-->
-						<!--<label for="">1. Расскажите немного о себе.</label>-->
-						<!--<input type="text" placeholder="Имя">-->
-						<!--<input type="text" placeholder="Email">-->
-					<!--</fieldset>-->
-					<!--<fieldset>-->
-						<!--<label for="">2. Расскажите о вашей идее продукта?</label>-->
-						<!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
-					<!--</fieldset>-->
-					<!--<fieldset>-->
-						<!--<button class="button green">Отправить</button>-->
-					<!--</fieldset>-->
-				<!--</form>-->
+				<div class="contact_form success">
+					<h2 class="title">Спасибо, мы скоро свяжемся с Вами.</h2>
+				</div>
+				<div class="contact_form error">
+					<h2 class="title">Не удалось отправить форму.<br>Расскажите о своем продукте: <a href="mailto:team@octoberry.ru">team@octoberry.ru</a></h2>
+				</div>
+				<form action="/submit" method="post" class="contact_form clearfix" id="contact_us_block">
+					<h2 class="title">Контакты</h2>
+					<fieldset>
+						<label for="">1. Расскажите немного о себе.</label>
+						<input type="text" placeholder="Имя" name="name">
+						<input type="text" placeholder="Email" name="email">
+					</fieldset>
+					<fieldset>
+						<label for="">2. Расскажите о вашей идее продукта?</label>
+						<textarea name="message" id="" cols="30" rows="10"></textarea>
+					</fieldset>
+					<fieldset>
+						<button class="button green">Отправить</button>
+					</fieldset>
+				</form>
 			</div>
 		</div>
 	</footer>
