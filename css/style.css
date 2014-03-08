@@ -433,7 +433,6 @@ header nav{
 	border-right: solid 10px #359e21 !important;
 	padding-left: 7px;
 	padding-right: 7px;
-	position: relative;
 }
 .table tr th.hovered:first-child, 
 .table tr td.hovered:first-child{
@@ -443,7 +442,6 @@ header nav{
 .table td.hovered{
 	border-left: solid 10px #359e21 !important;
 	border-right: solid 10px #359e21 !important;
-	position: relative;
 	padding-left: 7px;
 	padding-right: 7px;
 }
