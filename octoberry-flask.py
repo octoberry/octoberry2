@@ -47,5 +47,4 @@ def contact_submit():
     return result
 
 if __name__ == '__main__':
-    app.debug = True
     app.run()
