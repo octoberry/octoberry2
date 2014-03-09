@@ -14,15 +14,12 @@ app = OctoberryApp(__name__, static_url_path='')
 mail = Mail(app)
 
 
-@app.route('/ru')
-def index_ru():
-    return app.send_static_file('index_ru.html')
-
-
-@app.route('/')
-@app.route('/en')
-def index_en():
-    return app.send_static_file('index_en.html')
+@app.route('/', defaults={'lang': None})
+@app.route('/<lang>')
+def index_en(lang):
+    if lang not in ['ru', 'en']:
+        lang = 'ru' if 'ru' in request.host else 'en'
+    return app.send_static_file('index_%s.html' % lang)
 
 
 @app.route('/submit', methods=['POST'])
